@@ -9,7 +9,7 @@ String pass1=request.getParameter("rconfirmpass");
 if(pass.equals(pass1)){
 try{
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection conn=DriverManager.getConnection("jdbc:mysql://10.128.3.4:3306/testdb","private-app","zippyops");
+	Connection conn=DriverManager.getConnection("jdbc:mysql://10.128.3.2:3306/testdb","ansibleubuntu","zippyops");
 	PreparedStatement ps=conn.prepareStatement("insert into registration values(?,?,?,?)");
 	ps.setString(1, name);
 	ps.setString(2, email);
